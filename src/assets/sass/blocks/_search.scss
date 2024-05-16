@@ -1,0 +1,16 @@
+.search {
+	min-height: 135px;
+	background-color: $gin;
+	// padding: (60px + 68px) 0 80px 0;
+	padding: 60px 0 80px 0;
+	margin: 0 auto;
+	color: $judge-gray;
+	&_advanced {
+		color: $plantation;
+		background-color: $catskill-white;
+	}
+	&_tenure {
+		color: $plantation;
+		background-color: $ebb;
+	}
+}

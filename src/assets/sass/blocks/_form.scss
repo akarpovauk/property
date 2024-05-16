@@ -1,0 +1,73 @@
+.form {
+	margin: 0 auto;
+	margin-top: 24px;
+	&_search {
+		display: flex;
+		width: 100%;
+		padding: 0;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: stretch;
+	}
+	&_adv {
+		width: 500px;
+		display: grid; 
+		grid-template-columns: 150px 1fr 1fr; 
+		grid-template-rows: 1fr 1fr 1fr 1fr; 
+		gap: 16px 8px; 
+		grid-template-areas: 
+			"row1 row1 row1"
+			"row2 row2 row2"
+			"row3 row3 row3"
+			"row4 row4 row4"; 
+		.fieldset {
+			display: grid; 
+			align-items: center;
+			grid-template-columns: 150px 1fr 1fr; 
+			grid-template-rows: 1fr; 
+			gap: 0px 8px; 
+		}
+		.row1 {
+			grid-template-areas: 
+			  "label1 select1_1 select1_2"; 
+			grid-area: row1; 
+			.label1 {
+				grid-area: label1; 
+			}
+			.select1_1 { 
+				grid-area: select1_1; 
+			}
+			.select1_2 { 
+				grid-area: select1_2; 
+			}
+		}
+		.row2 {
+			grid-template-areas: 
+			  "label2 select2_1 select2_2"; 
+			grid-area: row2; 
+			.label2 { 
+				grid-area: label2;
+			}
+			.select2_1 { 
+				grid-area: select2_1; 
+			}
+			.select2_2 { 
+				grid-area: select2_2; 
+			}
+		}
+		.row3 {
+			grid-template-areas: 
+			  "label3 select3 select3"; 
+			grid-area: row3; 
+			.label3 { 
+				grid-area: label3; 
+			}
+			.select3 { 
+				grid-area: select3; 
+			}
+		}
+		.row4 { 
+			grid-area: row4; 
+		}
+	}
+}

@@ -1,0 +1,240 @@
+@media (max-width: 1200px) {
+	/* browser width 992px */
+	.container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+	/* browser width 768px */
+    /* elements should not be in 1 row  == tablet */
+    .container {
+        max-width: 720px;
+    }
+	a {
+		cursor: default;
+		&.link {
+			&:hover {
+				color: $cutty-sark;
+			}
+		}
+	}
+
+	.button {
+		&:hover {
+			cursor: default;
+			background-color: $deep-sea;
+			border: 1px solid $deep-sea;
+		}
+	}
+	.header {
+		height: 55px;
+	}
+	.logo {
+		&__img {
+			height: 55px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	/* browser width 576px */
+    /* hamburger */
+
+	.header {
+		&__wrapper {
+			padding: 0 20px;
+		}
+	}
+	.nav {
+		&__item {
+			margin-right: 0;
+		}
+	}
+	.container {
+        max-width: 540px;
+    }
+	.roboto-medium {
+		font-weight: 400;
+	}
+	.input {
+		&_search {
+			width: 420px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	/* browser width 320px */
+	.header {
+		height: 45px;
+		&__wrapper {
+			padding: 0 5px;
+		}
+		.hamburger {
+			display: block;
+			z-index: 2;
+		}
+		.logo {
+			&__img {
+				height: 45px;
+			}
+		}
+	}
+
+	.nav {
+		&__list {
+			display: none;
+			position: fixed;
+			top: 45px;
+			right: 0;
+			width: 100%;
+			flex-direction: column;
+			align-items: flex-start;
+			background-color: $tiara;
+			z-index: 1;
+			transition: 0.8s all;
+			&_active {
+				display: block;
+			}
+		}
+		&__item {
+			width: 100%;
+			margin: 0;
+			padding: 4px 0 4px 30px;
+			border-top: 1px solid $falcon;
+			box-shadow: inset 2px 2px 8px 2px $neptune;
+			&:last-child {
+				border-bottom: 1px solid $falcon;
+			}
+		}
+		a {
+			&.link {
+				color: $green-pea;
+				font-size: 16px;
+				padding: 0;
+			}
+		}
+	}
+	.container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+	.search {
+		padding: 40px 0;
+	}
+	.title {
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	.subtitle {
+		font-size: 18px;
+		font-weight: 500;
+		&_h1 {
+			font-size: 25px;
+			font-weight: 500;
+		}
+	}
+	.subheader {
+		font-size: 22px;
+		font-weight: 500;
+	}
+	.text {
+		font-size: 16px;
+	}
+	.form {
+		margin-top: 14px;
+		max-width: 400px;
+		&_search {
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+		&_adv {
+			width: 100%;
+			grid-template-columns: 1fr 1fr; 
+			grid-template-rows: 1fr 1fr 1fr 1fr; 
+			gap: 0px 0px; 
+			grid-template-areas: 
+			  "row1 row1"
+			  "row2 row2"
+			  "row3 row3"
+			  "row4 row4"; 
+			.fieldset {
+				display: grid; 
+				grid-template-columns: 1fr 1fr; 
+				grid-template-rows: 1fr 1fr; 
+				gap: 6px 8px; 
+				.label {
+					justify-self: center; 
+					align-self: end; 
+				}
+				.input {
+					padding: 4px 8px;
+				}
+			}
+			.row1 {
+				grid-template-areas: 
+					"label1 label1"
+					"select1_1 select1_2"; 
+				grid-area: row1; 
+				.label1 {
+					grid-area: label1; 
+				}
+				.select1_1 { 
+					grid-area: select1_1; 
+				}
+				.select1_2 { 
+					grid-area: select1_2; 
+				}
+			}
+			.row2 {
+				grid-template-areas: 
+				  "label2 label2"
+				  "select2_1 select2_2"; 
+				grid-area: row2; 
+				.label2 {
+					grid-area: label2; 
+				}
+				.select2_1 { 
+					grid-area: select2_1; 
+				}
+				.select2_2 { 
+					grid-area: select2_2; 
+				}		
+			}
+			.row3 {
+				grid-template-areas: 
+				  "label3 label3"
+				  "select3 select3"; 
+				grid-area: row3; 
+				.label3 {
+					grid-area: label3; 
+				}
+				.select3 { 
+					grid-area: select3; 
+				}
+			}
+			.row4 {
+				grid-area: row4; 
+				margin-top: 12px;
+				height: 40px; 
+			}
+		}
+	}
+	.input {
+		&_search {
+			width: 100%;
+		}
+	}
+	.button {
+		font-weight: 500;
+		font-size: 16px;
+		&_sale {
+			height: 44px;
+			width: 100%;
+			margin: 10px 0 0 0;
+		}
+	}
+}

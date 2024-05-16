@@ -1,0 +1,21 @@
+a {
+	cursor: pointer;
+	outline: 0;
+    text-decoration: none;
+	&.link {
+		color: $cutty-sark;
+		font-size: 26px;
+		display: block;
+		padding: 0 5px;
+		&:hover {
+			color: $breaker-bay;
+			transition: all 0.3s;
+		}
+		&:active {
+			color: $green-pea;
+			transition: all 0.3s;
+			border: none;
+		}
+	}
+
+}

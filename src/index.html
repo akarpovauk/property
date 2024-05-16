@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Freehold Finder</title>
+<!-- Primary Meta Tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicon --> 
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+	<link rel="manifest" href="icons/favicon/site.webmanifest">
+<!-- Fonts --> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Styles --> 
+	<link rel="stylesheet" href="assets/sass/style.min.css">
+</head>
+<body>
+	<header class="header">
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="header__wrapper">
+				<div class="logo">
+					<a href="#" class="link logo__link">
+						<img src="icons/logo_color_no_bg.svg" class="logo__img" alt="logo">
+					</a>	
+				</div>
+
+				<nav class="nav nav_header">
+					<ul class="nav__list">
+						<li class="nav__item roboto-medium">
+							<a href="#" class="link roboto-medium">Buy</a>
+						</li>
+						<li class="nav__item roboto-medium">
+							<a href="#" class="link roboto-medium">Tenure</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+	</header>
+
+	<section class="search hide">
+		<div class="container">
+			<h1 class="title">Search UK property for sale:</h1>
+			<h2 class="subtitle">use 'postcode', 'town name' or 'station'</h2>
+			<form method="POST" action="#" id="search-form" class="form form_search">
+				<input id="search" name="search" type="search" class="input input_search roboto-regular" placeholder="e.g. 'London', 'NW3', 'NW3 5TY' or 'Paddington station" required autocomplete="off">
+				<button id="sale-btn" class="button button_sale"><span>For Sale</span></button>
+			</form>
+		</div>
+	</section>
+
+	<section class="search search_advanced hide">
+		<div class="container">
+			<h2 id="text" class="subtitle">Property for sale in</h2>
+			<form method="POST" action="#" id="advanced-form" class="form form_adv">
+				<fieldset class="fieldset row1">
+					<label class="label label1" for="minPrice">Price range(£)</label>
+					<select class="input select1_1" name="minPrice" id="minPrice" title="Minimum price">
+						<option value selected="selected">No min</option>
+						<option value="50000">50 000</option>
+						<option value="60000">60 000</option>
+						<option value="70000">70 000</option>
+						<option value="80000">80 000</option>
+						<option value="90000">90 000</option>
+						<option value="100000">100 000</option>
+						<option value="110000">110 000</option>
+						<option value="120000">120 000</option>
+						<option value="130000">130 000</option>
+						<option value="140000">140 000</option>
+						<option value="150000">150 000</option>
+						<option value="160000">160 000</option>
+						<option value="170000">170 000</option>
+						<option value="180000">180 000</option>
+						<option value="190000">190 000</option>
+						<option value="200000">200 000</option>
+						<option value="210000">210 000</option>
+						<option value="220000">220 000</option>
+						<option value="230000">230 000</option>
+						<option value="240000">240 000</option>
+						<option value="250000">250 000</option>
+						<option value="260000">260 000</option>
+						<option value="270000">270 000</option>
+						<option value="280000">280 000</option>
+						<option value="290000">290 000</option>
+						<option value="300000">300 000</option>
+						<option value="325000">325 000</option>
+						<option value="350000">350 000</option>
+						<option value="375000">375 000</option>
+						<option value="400000">400 000</option>
+						<option value="425000">425 000</option>
+						<option value="450000">450 000</option>
+						<option value="475000">475 000</option>
+						<option value="500000">500 000</option>
+						<option value="550000">550 000</option>
+						<option value="600000">600 000</option>
+						<option value="650000">650 000</option>
+						<option value="700000">700 000</option>
+						<option value="800000">800 000</option>
+						<option value="900000">900 000</option>
+						<option value="1000000">1 000 000</option>
+						<option value="1250000">1 250 000</option>
+						<option value="1500000">1 500 000</option>
+						<option value="1750000">1 750 000</option>
+						<option value="2000000">2 000 000</option>
+						<option value="3000000">3 000 000</option>
+						<option value="4000000">4 000 000</option>
+						<option value="5000000">5 000 000</option>
+						<option value="7500000">7 500 000</option>
+						<option value="10000000">10 000 000</option>
+						<option value="15000000">15 000 000</option>
+						<option value="20000000">20 000 000</option>
+						<option value>No min</option>
+					</select>
+					<select class="input select1_2" name="maxPrice" id="maxPrice" title="Maximum price">
+						<option value selected="selected">No max</option>
+						<option value="50000">50 000</option>
+						<option value="60000">60 000</option>
+						<option value="70000">70 000</option>
+						<option value="80000">80 000</option>
+						<option value="90000">90 000</option>
+						<option value="100000">100 000</option>
+						<option value="110000">110 000</option>
+						<option value="120000">120 000</option>
+						<option value="130000">130 000</option>
+						<option value="140000">140 000</option>
+						<option value="150000">150 000</option>
+						<option value="160000">160 000</option>
+						<option value="170000">170 000</option>
+						<option value="180000">180 000</option>
+						<option value="190000">190 000</option>
+						<option value="200000">200 000</option>
+						<option value="210000">210 000</option>
+						<option value="220000">220 000</option>
+						<option value="230000">230 000</option>
+						<option value="240000">240 000</option>
+						<option value="250000">250 000</option>
+						<option value="260000">260 000</option>
+						<option value="270000">270 000</option>
+						<option value="280000">280 000</option>
+						<option value="290000">290 000</option>
+						<option value="300000">300 000</option>
+						<option value="325000">325 000</option>
+						<option value="350000">350 000</option>
+						<option value="375000">375 000</option>
+						<option value="400000">400 000</option>
+						<option value="425000">425 000</option>
+						<option value="450000">450 000</option>
+						<option value="475000">475 000</option>
+						<option value="500000">500 000</option>
+						<option value="550000">550 000</option>
+						<option value="600000">600 000</option>
+						<option value="650000">650 000</option>
+						<option value="700000">700 000</option>
+						<option value="800000">800 000</option>
+						<option value="900000">900 000</option>
+						<option value="1000000">1 000 000</option>
+						<option value="1250000">1 250 000</option>
+						<option value="1500000">1 500 000</option>
+						<option value="1750000">1 750 000</option>
+						<option value="2000000">2 000 000</option>
+						<option value="3000000">3 000 000</option>
+						<option value="4000000">4 000 000</option>
+						<option value="5000000">5 000 000</option>
+						<option value="7500000">7 500 000</option>
+						<option value="10000000">10 000 000</option>
+						<option value="15000000">15 000 000</option>
+						<option value="20000000">20 000 000</option>
+						<option value>No max</option>
+					</select>
+				</fieldset>
+				<fieldset class="fieldset row2">
+					<label class="label label2" for="minBed">No. of bedrooms</label>
+					<select class="input select2_1" name="minBed" id="minBed" title="Minimum number of bedrooms">
+						<option value selected>No min</option>
+						<option value="0">Studio</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					<select class="input select2_2" name="maxBed" id="maxBed" title="Maximum number of bedrooms">
+						<option value selected>No max</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</fieldset>
+				<fieldset class="fieldset row3">
+					<label class="label label3" for="tenure">Tenure</label>
+					<select class="input select3" name="tenure" id="tenure" title="Tenure">
+						<option value="0" selected>Freehold</option>
+						<option value="1">Leasehold</option>
+						<option value="2">Share of Freehold</option>
+						<option value="3">Commonhold</option>
+						<option value="4">Shared Ownership</option>
+					</select>
+				</fieldset>
+				<button id="search-btn" class="button row4"><span>Search</span></button>
+			</form>
+		</div>
+	</section>
+
+	<section class="search search_tenure show">
+		<div class="container">
+			<h2 class="subtitle subtitle_h1">Tenure in the UK</h2>
+			<p class="text mt12">
+				Tenure in the UK defines the legal right to occupy a property. The main types include Freehold, Leasehold (including Shared Ownership), Share of Freehold, and Commonhold.
+			</p>
+			<article>
+				<h3 class="subheader mt12">
+					Freehold
+				</h3>
+				<p class="text">
+					Freehold ownership grants complete ownership of the property and land without a time limit. Owners are responsible for maintenance and have freedom for alterations. There are no ground rents or service charges.
+				</p>
+			</article>
+			<article>
+				<h3 class="subheader mt12">
+					Leasehold
+				</h3>
+				<p class="text">
+					Leasehold is a type of rental; it is a long term tenancy contract agreement. Leasehold means buying the right to live in a property for a fixed term. 
+				</p>
+				<p class="text">
+					When you 'buy' a leasehold property, you do not own any of the land or building: you acquire the right to occupy a part of it for the time remaining on the lease. It's akin to long-term tenancy rather than ownership. So, leaseholders are just tenants not home owners.
+				</p>
+				<p class="text">
+					Ground rent and service charges are typically paid to the freeholder. Lease extensions can be costly, and alterations often require the landlord's permission. 
+				</p>
+				<p class="text">
+					Leasehold properties may suffer from escalating ground rents, high service charges, and restrictive lease terms.
+				</p>
+				<p class="text">
+					Lease length affects property value and mortgage eligibility, ideally having at least 80 years remaining.
+				</p>
+			</article>
+			<article>
+				<h3 class="subheader mt12">
+					Shared Ownership
+				</h3>
+				<p class="text">
+					A form of leasehold where you buy a percentage of the property and pay rent on the remainder. Purchasing the remaining share might require permission. 
+				</p>
+				<p class="text">
+					Shared Ownership may require permission to sell.
+				</p>
+			</article>
+			<article>
+				<h3 class="subheader mt12">
+					Share of Freehold
+				</h3>
+				<p class="text">
+					Combines elements of both Freehold and Leasehold. Owners hold a share in the freehold of the building and a lease for their property. Ground rents and service charges may still apply, but owners have more control over management decisions.
+				</p>
+			</article>
+			<article>
+				<h3 class="subheader mt12">
+					Commonhold
+				</h3>
+				<p class="text">
+					Owned jointly by property owners, commonhold properties have no overall landlord. Each unit owner owns the freehold of their unit, while a Commonhold Association manages common areas.
+				</p>
+				<p class="text">
+					Commonhold properties may face enforcement challenges and conversion complexities.
+				</p>
+			</article>
+		</div>
+	</section>
+</body>
+</html>

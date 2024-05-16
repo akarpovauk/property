@@ -1,0 +1,56 @@
+* {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+.title {
+	margin: 0;
+	text-align: center;
+	font-size: 28px;
+}
+.subtitle {
+	text-align: center;
+	font-size: 24px;
+	margin: 0;
+	&_h1 {
+		font-weight: 600;
+		font-size: 26px;
+	}
+}
+.subheader {
+	text-align: left;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.mt12 {
+	margin-top: 12px;
+}
+
+.text {
+	text-align: justify;
+	font-size: 18px;
+	span {
+		font-weight: 600;
+	}
+}
+
+.roboto-light {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+  
+.roboto-regular {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	}
+  
+.roboto-medium {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+  
