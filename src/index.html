@@ -26,19 +26,19 @@
 			</div>
 
 			<div class="header__wrapper">
-				<div class="logo">
-					<a href="#" class="link logo__link">
+				<div class="logo" id="0_search">
+					<a href="index.html" class="link logo__link">
 						<img src="icons/logo_color_no_bg.svg" class="logo__img" alt="logo">
 					</a>	
 				</div>
 
 				<nav class="nav nav_header">
 					<ul class="nav__list">
-						<li class="nav__item roboto-medium">
-							<a href="#" class="link roboto-medium">Buy</a>
+						<li class="nav__item roboto-medium" id="1_search">
+							<a href="index.html" class="link tab roboto-medium">Buy</a>
 						</li>
-						<li class="nav__item roboto-medium">
-							<a href="#" class="link roboto-medium">Tenure</a>
+						<li class="nav__item roboto-medium" id="2_tenure">
+							<a href="index.html" class="link tab active roboto-medium">Tenure</a>
 						</li>
 					</ul>
 				</nav>
@@ -46,7 +46,7 @@
 			</div>
 	</header>
 
-	<section class="search hide">
+	<section class="section search faded" id="search">
 		<div class="container">
 			<h1 class="title">Search UK property for sale:</h1>
 			<h2 class="subtitle">use 'postcode', 'town name' or 'station'</h2>
@@ -57,7 +57,7 @@
 		</div>
 	</section>
 
-	<section class="search search_advanced hide">
+	<section class="subsection search search_advanced faded hide" id="search_advanced">
 		<div class="container">
 			<h2 id="text" class="subtitle">Property for sale in</h2>
 			<form method="POST" action="#" id="advanced-form" class="form form_adv">
@@ -211,7 +211,7 @@
 		</div>
 	</section>
 
-	<section class="search search_tenure show">
+	<section class="section search search_tenure faded" id="tenure">
 		<div class="container">
 			<h2 class="subtitle subtitle_h1">Tenure in the UK</h2>
 			<p class="text mt12">
@@ -277,5 +277,6 @@
 			</article>
 		</div>
 	</section>
+	<script src="script.js"></script>
 </body>
 </html>

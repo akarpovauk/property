@@ -67,8 +67,9 @@
 @media (max-width: 575px) {
 	/* browser width 320px */
 	.header {
-		height: 45px;
+		height: 50px;
 		&__wrapper {
+			height: 50px;
 			padding: 0 5px;
 		}
 		.hamburger {
@@ -89,9 +90,10 @@
 			top: 45px;
 			right: 0;
 			width: 100%;
+			height: 100%;
 			flex-direction: column;
 			align-items: flex-start;
-			background-color: $tiara;
+			background-color: rgba(93, 127, 161, 0.3);
 			z-index: 1;
 			transition: 0.8s all;
 			&_active {
@@ -102,6 +104,7 @@
 			width: 100%;
 			margin: 0;
 			padding: 4px 0 4px 30px;
+			background-color: $tiara;
 			border-top: 1px solid $falcon;
 			box-shadow: inset 2px 2px 8px 2px $neptune;
 			&:last-child {
@@ -111,9 +114,17 @@
 		a {
 			&.link {
 				color: $green-pea;
-				font-size: 16px;
+				font-size: 20px;
 				padding: 0;
+				&.active {
+					color: $falcon;
+					font-weight: 500;
+					&::after {
+						width: 0%;
+					}
+				}
 			}
+
 		}
 	}
 	.container {

@@ -3,6 +3,7 @@ a {
 	outline: 0;
     text-decoration: none;
 	&.link {
+		position: relative;
 		color: $cutty-sark;
 		font-size: 26px;
 		display: block;
@@ -16,6 +17,26 @@ a {
 			transition: all 0.3s;
 			border: none;
 		}
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 0%;
+			bottom: 0%;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 2px;
+			background-color: $green-pea;;
+			transition: .4s all;
+		}
+		&.active {
+			color: $green-pea;
+			&::after {
+				width: 90%;
+			}
+		}
 	}
 
+
 }
+

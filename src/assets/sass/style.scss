@@ -1,12 +1,25 @@
 @import 'libs/bootstrap-reboot.min';
 @import 'libs/font';
 
-
 .show {
 	display: block;
 }
 .hide {
 	display: none;
+}
+
+.faded {
+    animation-name: faded;
+    animation-duration: 1s;
+}
+
+@keyframes faded {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @import 'base/variables';
