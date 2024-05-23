@@ -9,7 +9,9 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
-	<link rel="manifest" href="icons/favicon/site.webmanifest">
+	<link rel="icon" type="image/png" sizes="192x192" href="icons/favicon/android-chrome-192x192">
+
+	<!-- <link rel="manifest" href="icons/favicon/site.webmanifest"> -->
 <!-- Fonts --> 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +28,7 @@
 			</div>
 
 			<div class="header__wrapper">
-				<div class="logo" id="0_search">
+				<div class="logo search-main" id="logo">
 					<a href="index.html" class="link logo__link">
 						<img src="icons/logo_color_no_bg.svg" class="logo__img" alt="logo">
 					</a>	
@@ -34,11 +36,11 @@
 
 				<nav class="nav nav_header">
 					<ul class="nav__list">
-						<li class="nav__item roboto-medium" id="1_search">
-							<a href="index.html" class="link tab roboto-medium">Buy</a>
+						<li class="nav__item roboto-medium search-main" id="search">
+							<a href="index.html" class="link roboto-medium tab">Buy</a>
 						</li>
-						<li class="nav__item roboto-medium" id="2_tenure">
-							<a href="index.html" class="link tab active roboto-medium">Tenure</a>
+						<li class="nav__item roboto-medium tenure-doc" id="tenure">
+							<a href="index.html" class="link active roboto-medium tab">Tenure</a>
 						</li>
 					</ul>
 				</nav>
@@ -46,25 +48,28 @@
 			</div>
 	</header>
 
-	<section class="section search faded" id="search">
+	<section class="search faded hide search-main" id="search-main">
 		<div class="container">
 			<h1 class="title">Search UK property for sale:</h1>
 			<h2 class="subtitle">use 'postcode', 'town name' or 'station'</h2>
+
 			<form method="POST" action="#" id="search-form" class="form form_search">
-				<input id="search" name="search" type="search" class="input input_search roboto-regular" placeholder="e.g. 'London', 'NW3', 'NW3 5TY' or 'Paddington station" required autocomplete="off">
+				<input id="search-input" name="search" type="search" class="input input_search roboto-regular" placeholder="e.g. 'London', 'NW3', 'NW3 5TY' or 'Paddington station" required autocomplete="off">
 				<button id="sale-btn" class="button button_sale"><span>For Sale</span></button>
 			</form>
+
 		</div>
 	</section>
 
-	<section class="subsection search search_advanced faded hide" id="search_advanced">
+	<section class="search search_advanced faded hide search-adv" id="search-advanced">
 		<div class="container">
-			<h2 id="text" class="subtitle">Property for sale in</h2>
+			<h2 id="text" class="subtitle">Property for sale in </h2>
+
 			<form method="POST" action="#" id="advanced-form" class="form form_adv">
 				<fieldset class="fieldset row1">
-					<label class="label label1" for="minPrice">Price range(£)</label>
-					<select class="input select1_1" name="minPrice" id="minPrice" title="Minimum price">
-						<option value selected="selected">No min</option>
+					<label class="label label1" for="min-price">Price range(£)</label>
+					<select class="input select1_1" name="minPrice" id="min-price" title="Minimum price">
+						<option value="0" selected="selected">No min</option>
 						<option value="50000">50 000</option>
 						<option value="60000">60 000</option>
 						<option value="70000">70 000</option>
@@ -119,8 +124,8 @@
 						<option value="20000000">20 000 000</option>
 						<option value>No min</option>
 					</select>
-					<select class="input select1_2" name="maxPrice" id="maxPrice" title="Maximum price">
-						<option value selected="selected">No max</option>
+					<select class="input select1_2" name="maxPrice" id="max-price" title="Maximum price">
+						<option value="0" selected="selected">No max</option>
 						<option value="50000">50 000</option>
 						<option value="60000">60 000</option>
 						<option value="70000">70 000</option>
@@ -177,18 +182,19 @@
 					</select>
 				</fieldset>
 				<fieldset class="fieldset row2">
-					<label class="label label2" for="minBed">No. of bedrooms</label>
-					<select class="input select2_1" name="minBed" id="minBed" title="Minimum number of bedrooms">
-						<option value selected>No min</option>
-						<option value="0">Studio</option>
+					<label class="label label2" for="min-bed">No. of bedrooms</label>
+					<select class="input select2_1" name="minBed" id="min-bed" title="Minimum number of bedrooms">
+						<option value="0" selected>No min</option>
+						<option value="0.5">Studio</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-					<select class="input select2_2" name="maxBed" id="maxBed" title="Maximum number of bedrooms">
-						<option value selected>No max</option>
+					<select class="input select2_2" name="maxBed" id="max-bed" title="Maximum number of bedrooms">
+						<option value="0" selected>No max</option>
+						<option value="0.5">Studio</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -197,8 +203,8 @@
 					</select>
 				</fieldset>
 				<fieldset class="fieldset row3">
-					<label class="label label3" for="tenure">Tenure</label>
-					<select class="input select3" name="tenure" id="tenure" title="Tenure">
+					<label class="label label3" for="tenure-input">Tenure</label>
+					<select class="input select3" name="tenureInput" id="tenure-input" title="Tenure">
 						<option value="0" selected>Freehold</option>
 						<option value="1">Leasehold</option>
 						<option value="2">Share of Freehold</option>
@@ -211,7 +217,7 @@
 		</div>
 	</section>
 
-	<section class="section search search_tenure faded" id="tenure">
+	<section class="search search_tenure faded hide tenure-doc" id="tenure-section">
 		<div class="container">
 			<h2 class="subtitle subtitle_h1">Tenure in the UK</h2>
 			<p class="text mt12">

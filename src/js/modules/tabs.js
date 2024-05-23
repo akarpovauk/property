@@ -1,40 +1,53 @@
 
-const tabs = (sectionSelector, navItemsSelector, activeClass, hideClass, navSelector, logoSelector, logoItemSelector) => {
+const tabs = (sectionSelector, navSelector, navItemsSelector) => {
+	// tabs('section', '.nav', '.tab');
 	const sections = document.querySelectorAll(sectionSelector);
-	const navItems = document.querySelectorAll(navItemsSelector);
 	const nav = document.querySelector(navSelector);
-	const logo = document.querySelector(logoSelector);
-	const logoItems = document.querySelectorAll(logoItemSelector);
-		
+	const navItems = document.querySelectorAll(navItemsSelector);
+	const logo = document.querySelector('.logo');
+	const logoLinks  = document.querySelectorAll('.logo__link');
+
 	function hideTabContent() {
 		sections.forEach(item => {
-			item.classList.add(hideClass);
+			item.classList.add('hide');
 		});
 		navItems.forEach(item => {
-			item.classList.remove(activeClass);
+			item.classList.remove('active');
 		});
 	}
 
-	function showTabContent(i = 0) {
-		sections[i].classList.remove(hideClass);
-		navItems[i].classList.add(activeClass);
-		// adjustPadding();
+	function showTabContent(selector) {
+		let str = `${sectionSelector}.${selector}`;
+		let sectionToShow = document.querySelector(str);
+		sectionToShow.classList.remove('hide');
+
+		navItems.forEach(item => {
+			if(item.parentNode.classList.contains(selector)) {
+				item.classList.add('active');
+			} 
+		});
 	}
 
 	//show tabs by default
 	hideTabContent();
-	showTabContent();
+	showTabContent('search-main');
 
 	function switchTabs(parent, children, childSelector) {
 		parent.addEventListener('click', (e) => {
 			e.preventDefault();
 			const target = e.target;
+
 			if (target && (target.classList.contains(childSelector.replace(/\./, '')) || 
 			target.parentNode.classList.contains(childSelector.replace(/\./, '')))) {
-				children.forEach((item, i) => {
+				children.forEach((item) => {
 					if (target == item || target.parentNode == item) {
 						hideTabContent();
-						showTabContent(i);
+						if (item.parentNode.classList.contains('search-main')) {
+							showTabContent('search-main');
+							
+						} else {
+							showTabContent('tenure-doc');
+						}
 					}
 				});
 			}
@@ -42,8 +55,7 @@ const tabs = (sectionSelector, navItemsSelector, activeClass, hideClass, navSele
 	}
 
 	switchTabs(nav, navItems, navItemsSelector);
-	switchTabs(logo, logoItems, logoItemSelector);
-
+	switchTabs(logo, logoLinks, '.logo__link');
 };
 
 export default tabs;

@@ -93,7 +93,8 @@
 			height: 100%;
 			flex-direction: column;
 			align-items: flex-start;
-			background-color: rgba(93, 127, 161, 0.3);
+			// background-color: rgba(93, 127, 161, 0.6);
+			background-color: rgba(240, 245, 243, .7);
 			z-index: 1;
 			transition: 0.8s all;
 			&_active {

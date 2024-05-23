@@ -71,3 +71,17 @@
 		}
 	}
 }
+
+.status {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	color: $pickled-bluewood;
+	&_img {
+		margin-top: 5px;
+		width: 40px;
+	}
+}
